@@ -4,26 +4,19 @@ import torch
 from torchvision import models, transforms
 from PIL import Image
 
-# -------------------------------
-# Load pretrained model once
-# -------------------------------
+
 print("🔄 Loading AI model...")
 
 model = models.resnet50(weights=models.ResNet50_Weights.DEFAULT)
 model.eval()
 
-# -------------------------------
-# Image preprocessing pipeline
-# -------------------------------
 preprocess = transforms.Compose([
     transforms.Resize(256),
     transforms.CenterCrop(224),
     transforms.ToTensor(),
 ])
 
-# -------------------------------
-# Auto-download ImageNet labels
-# -------------------------------
+
 LABEL_URL = "https://raw.githubusercontent.com/pytorch/hub/master/imagenet_classes.txt"
 LABEL_FILE = "imagenet_classes.txt"
 
@@ -36,9 +29,7 @@ with open(LABEL_FILE, "r") as f:
 
 print("✅ Model and labels loaded successfully.")
 
-# -------------------------------
-# Mapping detected object → waste category
-# -------------------------------
+
 def map_to_waste(label):
     label = label.lower()
 
@@ -56,9 +47,7 @@ def map_to_waste(label):
         return "Mixed Waste", 5
 
 
-# -------------------------------
-# Image Analysis (Mini Google Lens)
-# -------------------------------
+
 def analyze_waste_image(image_path):
     image = Image.open(image_path).convert("RGB")
     input_tensor = preprocess(image).unsqueeze(0)
@@ -69,15 +58,12 @@ def analyze_waste_image(image_path):
 
     detected_object = IMAGENET_LABELS[predicted_index]
 
-    # Map detected object to waste category
+    
     waste_label, risk = map_to_waste(detected_object)
 
     return waste_label, risk, detected_object
 
 
-# -------------------------------
-# Hotspot Classification
-# -------------------------------
 def classify_hotspot(risk_score):
     if risk_score >= 7:
         return "🔴 RED HOTSPOT"
