@@ -1,75 +1,73 @@
-# EcoVision: AI-Powered Circular Waste Intelligence 🌍♻️
-
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
-[![ML-Framework: TensorFlow/PyTorch](https://img.shields.io/badge/ML-TensorFlow%20%2F%20PyTorch-orange)](https://tensorflow.org)
-
+# ♻️ EcoVision: AI-Powered Circular Waste Intelligence
 **"Transforming waste into value through Computer Vision and Predictive Analytics."**
 
----
-
-## 📌 Project Vision
-Traditional waste management is reactive—we deal with the mess after the bins overflow. **EcoVision** shifts the paradigm from "Waste Disposal" to "Resource Management." By using machine learning to identify waste types and predict generation hotspots, we empower cities and individuals to reduce landfill footprints and embrace a circular economy.
+EcoVision is a smart end-to-end solution designed to automate waste identification, predict generation trends, and provide actionable recommendations for a circular economy. By digitizing waste management, we reduce landfill pollution and maximize recycling efficiency.
 
 ---
 
-## ✨ Key Features
-
-### 🔍 1. Vision-Based Sorting
-Upload an image or use a live camera feed. Our model identifies:
-* **Waste Category:** Plastic, Paper, Metal, Glass, Organic, or Hazardous.
-* **Fill Level:** Real-time estimation of bin capacity to prevent overflows.
-
-### 📈 2. Predictive Hotspot Analysis
-Using historical data, the system predicts which geographical zones will hit peak waste capacity next, allowing for optimized collection routes.
-
-### 💡 3. Smart Recommendations
-Instead of just "throwing it away," EcoVision suggests:
-* **Reuse:** Creative DIY ideas for glass/plastic.
-* **Recycle:** Nearest specialized recycling centers.
-* **Compost:** Instructions for organic waste breakdown.
-
-### 📊 4. Impact Dashboard
-A data-driven UI that visualizes:
-* Landfill diversion rates.
-* Carbon footprint reduction.
-* Regional waste trends.
+## 🎯 Problem Statement
+Improper waste segregation, delayed collection, and lack of data-driven monitoring lead to overflowing bins and increased landfill pollution. Manual tracking is slow and inaccurate. There is a need for an intelligent system that can automatically analyze waste using images, predict generation hotspots, and recommend smart reuse/recycling actions to support a circular economy.
 
 ---
 
-## 🛠️ System Architecture
+## 🧩 Project Modules
 
+### 1️⃣ Image-Based Waste Detection
+* **Function:** User uploads or clicks a waste image.
+* **ML Logic:** CNN model detects waste category (Plastic, Metal, Organic, Glass, Paper) and estimates bin fullness levels.
 
+### 2️⃣ Automatic Data Generation & Storage
+* **Function:** Converts image classification outputs into structured data.
+* **Storage:** Logs Date, Time, Waste Type, and Fill Level automatically for administrative tracking.
 
-1.  **Input Layer:** IoT Cameras / User Mobile App.
-2.  **Processing Layer:** Feature extraction using CNNs (e.g., ResNet or YOLO).
-3.  **Data Layer:** Structured logging into a Time-Series Database.
-4.  **Intelligence Layer:** Hotspot prediction using LSTM or Random Forest.
-5.  **Action Layer:** Real-time UI Dashboards and SMS/Push notifications for collectors.
+### 3️⃣ Waste Analytics Dashboard
+* **Visuals:** Real-time charts showing waste trends and area-wise generation.
+* **Impact:** Provides recycling statistics and landfill diversion metrics at a glance.
+
+### 4️⃣ ML-Based Hotspot Prediction
+* **Intelligence:** Uses historical logs to predict future waste quantity.
+* **Action:** Identifies high-risk areas before overflow happens, allowing for optimized collection routes.
+
+### 5️⃣ Smart Recommendations & Circular Economy
+* **Innovation:** Suggests the best "Value-Added" action for detected waste.
+* **Suggestions:** DIY reuse projects for non-biodegradables and composting guides for organic waste.
+
+### 6️⃣ Environmental Impact Awareness
+* **Goal:** Calculates and displays the reduction in carbon footprint and landfill usage to encourage responsible habits.
 
 ---
 
-## 🚀 Tech Stack
+## 🏗️ System Architecture
 
-| Component | Technology |
-| :--- | :--- |
-| **Frontend** | React.js / Flutter |
-| **Backend** | FastAPI / Node.js |
-| **Computer Vision** | OpenCV, PyTorch / TensorFlow |
-| **Prediction Model** | Scikit-Learn / Prophet |
-| **Database** | MongoDB & PostgreSQL |
-| **Deployment** | Docker & AWS/GCP |
+
+
+The system follows a pipeline: **Image Input** ➡️ **CNN Classification** ➡️ **Data Logging** ➡️ **Predictive Analytics** ➡️ **User Recommendation**.
 
 ---
 
-## 🏗️ Getting Started
+## 💻 Tech Stack
+* **Language:** Python
+* **Frontend/UI:** Streamlit (Web Interface)
+* **Machine Learning:** TensorFlow / Keras (CNN & Predictive Models)
+* **Image Processing:** OpenCV / PIL (Pillow)
+* **Data Handling:** Pandas & NumPy
+* **Visualization:** Plotly / Matplotlib
 
-### Prerequisites
-* Python 3.9+
-* Node.js (for Dashboard)
+---
 
-### Installation
-1. **Clone the repo**
+## 👥 The Team: BROGRAMMERS-03
+
+| Name | Official Email | GitHub Profile |
+| :--- | :--- | :--- |
+| **Ashutosh Mohanty** | cse.24bcsa25@silicon.ac.in | [Ashutosh-1505](https://github.com/Ashutosh-1505) |
+| **Pravanjan Behera** | pravanjanbehera255@gmail.com | [pravanjanbehera](https://github.com/pravanjanbehera) |
+| **Sandeep Kumar Behera** | sandeepbehera2806@gmail.com | [SKB2806](https://github.com/SKB2806) |
+| **Raj Yadav** | rajyadavv21@gmail.com | [Raj-Yadav07](https://github.com/Raj-Yadav-07) |
+| **Asmit Raj** | asmitraj1110@gmail.com | [AsmitRaj110](https://github.com/AsmitRaj110) |
+---
+
+## 🚀 Getting Started
+
+1. **Clone the repository:**
    ```bash
-   git clone [https://github.com/yourusername/ecovision.git](https://github.com/yourusername/ecovision.git)
-   cd ecovision
+   git clone [https://github.com/pravanjanbehera/BROGRAMMERS-03.git](https://github.com/pravanjanbehera/BROGRAMMERS-03.git)
