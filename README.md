@@ -48,7 +48,7 @@ The system follows a pipeline: **Image Input** ➡️ **CNN Classification** ➡
 ## 💻 Tech Stack
 * **Language:** Python
 * **Frontend/UI:** Streamlit (Web Interface)
-* **Machine Learning:** TensorFlow / Keras (CNN & Predictive Models)
+* **Machine Learning:** TensorFlow (CNN & Predictive Models)
 * **Image Processing:** OpenCV / PIL (Pillow)
 * **Data Handling:** Pandas & NumPy
 * **Visualization:** Plotly / Matplotlib
@@ -66,8 +66,10 @@ The system follows a pipeline: **Image Input** ➡️ **CNN Classification** ➡
 | **Asmit Raj** | asmitraj1110@gmail.com | [AsmitRaj110](https://github.com/AsmitRaj110) |
 ---
 
-## 🚀 Getting Started
+---
 
-1. **Clone the repository:**
-   ```bash
-   git clone [https://github.com/pravanjanbehera/BROGRAMMERS-03.git](https://github.com/pravanjanbehera/BROGRAMMERS-03.git)
+## ❤️ Special Thanks
+We would like to extend our heartfelt gratitude to the **Eco Social Club** for organizing **Eco Hack**. Thank you for providing this platform to innovate and contribute toward a more sustainable and greener future! 🌿🙌
+
+---
+*Developed with ❤️ for a Sustainable Future by Team Brogrammers*
